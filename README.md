@@ -1,3 +1,6 @@
+
+This is on how to make an RPM of Mozilla Location Service on your SailfishOS device for improving GPS functionality.
+
 # How to use
 
  - Install RPMBUILD: https://talk.maemo.org/showthread.php?t=92963

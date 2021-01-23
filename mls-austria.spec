@@ -6,7 +6,6 @@ License:    Public Domain
 BuildRequires: geoclue-provider-mlsdb-tool
 BuildRequires: curl
 BuildArch:  noarch
-Source0:    https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-2021-01-23T000000.csv.gz
 
 %description
 
@@ -15,6 +14,7 @@ curl https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-2021-01-2
 
 %build
 geoclue-mlsdb-tool -c Austria MLS-full-cell-export.csv
+rm MLS-full-cell-export.csv
 
 %install
 mkdir -p %{buildroot}/usr/share/geoclue-provider-mlsdb/
