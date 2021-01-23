@@ -11,11 +11,10 @@ Source0:    https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-20
 %description
 
 %prep
-curl https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-2021-01-23T000000.csv.gz -o mls-full.csv.gz
-gunzip mls-full.csv.gz
+curl https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-2021-01-23T000000.csv.gz | gunzip - > MLS-full-cell-export.csv
 
 %build
-geoclue-mlsdb-tool -c Austria mls-full.csv
+geoclue-mlsdb-tool -c Austria MLS-full-cell-export.csv
 
 %install
 mkdir -p %{buildroot}/usr/share/geoclue-provider-mlsdb/
