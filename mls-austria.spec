@@ -10,7 +10,7 @@ BuildArch:  noarch
 %description
 
 %prep
-curl https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-2021-01-23T000000.csv.gz | gunzip - > MLS-full-cell-export.csv
+curl "https://d2koia3g127518.cloudfront.net/export/MLS-full-cell-export-$(date -I --date="yesterday").csv.gz" | gunzip - > MLS-full-cell-export.csv
 
 %build
 geoclue-mlsdb-tool -c Austria MLS-full-cell-export.csv
