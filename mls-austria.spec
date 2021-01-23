@@ -1,13 +1,14 @@
 Name:       mls-austria
 Version:    1.0.0
 Release:    1
-Summary:    MLS data for Austria
+Summary:    Mozilla Location Service (MLS https://location.services.mozilla.com/downloads) data for Austria
 License:    Public Domain
 BuildRequires: geoclue-provider-mlsdb-tool
 BuildRequires: curl
 BuildArch:  noarch
 
 %description
+%{summary}
 
 %prep
 yesterday_busybox=$( /bin/date -D "%s" -d $(( $(/bin/date +%s ) - 86400 )) +%Y-%m-%d )

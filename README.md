@@ -7,8 +7,8 @@ This is on how to make an RPM of Mozilla Location Service on your SailfishOS dev
  - On your mobile: `cd /tmp/; curl -O https://raw.githubusercontent.com/wosrediinanatour/sailfish-gps/master/mls-austria.spec`
  - If you donn't live in Austria, change the country in via `vi mls-austria.spec` (type `i` for insert, edit the country, type `ESC`, type `:qw`)
  - Build RPM: `devel-su rpmbuild -ba -v /tmp/mls-austria.spec`
- - RPM is in `/root/rpmbuild/RPMS/noarch/mls-austria-1.0.0-1.noarch.rpm`
- - Download it via  `scp nemo@a.b.c.d:/root/rpmbuild/RPMS/noarch/mls-austria-1.0.0-1.noarch.rpm .`
+ - RPM is in `/root/rpmbuild/RPMS/noarch/`
+ - Download it via  `scp nemo@a.b.c.d:/root/rpmbuild/RPMS/noarch/*.rpm .`
 
 
 # How to use via cloning this repo
@@ -19,8 +19,8 @@ This is on how to make an RPM of Mozilla Location Service on your SailfishOS dev
  - `scp mls-austria.spec nemo@a.b.c.d:/tmp/`
  - `ssh nemo@a.b.c.d`
  - Build RPM: `devel-su rpmbuild -ba -v /tmp/mls-austria.spec`
- - RPM is in `/root/rpmbuild/RPMS/noarch/mls-austria-1.0.0-1.noarch.rpm`
- - Download it via  `scp nemo@a.b.c.d:/root/rpmbuild/RPMS/noarch/mls-austria-1.0.0-1.noarch.rpm .`
+ - RPM is in `/root/rpmbuild/RPMS/noarch/`
+ - Download it via  `scp nemo@a.b.c.d:/root/rpmbuild/RPMS/noarch/*.rpm .`
 
 Note that it will fail, if you don't have enough space.
 
